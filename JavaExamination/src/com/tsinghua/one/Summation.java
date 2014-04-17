@@ -1,10 +1,11 @@
 package com.tsinghua.one;
 
+import java.math.BigInteger;
 import java.util.Scanner;
 
 public class Summation {
 
-	private long result;
+	private BigInteger result;
 	/**
 	 * @param args
 	 */
@@ -15,14 +16,12 @@ public class Summation {
 		System.out.println(new Summation().getResult(number));
 	}
 	
-	private long getResult(int number) {
-		
+	protected BigInteger getResult(int number) {
+		result=new BigInteger("0");
+		BigInteger bigNumber;
 		for (int i = 1; i <= number; i++) {
-			long temp=i;
-			for (int j = 1; j < i; j++) {
-				temp*=i;
-			}
-			result+=temp;
+			bigNumber=BigInteger.valueOf(i);
+			result=result.add(bigNumber.pow(i));
 		}
 		 return result;
 	}
