@@ -1,0 +1,9 @@
+老师或主教您好:
+	1.请使用TestSuite类来批量运行所有的testcase
+	2.默认是使用IE测试，为了满足多多浏览器测试，我已经把火狐也进行了测试，如果想更改测试浏览器，请修改JDSuit类中的
+	selenium = new DefaultSelenium(url, port, Browser.IE.toString(), JDWebSite);
+	把Browser.IE.toString()更换成Browser.Firefox.toString()，然后从新run TestSuite
+	
+	注：我分别在IE和火狐下进行了测试，测试结果都是测试通过的。
+	
+	感谢老师及助教。
