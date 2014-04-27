@@ -63,6 +63,8 @@ public class TestSearch {
 		selenium.type("id=key", "电信");
 		selenium.click("css=input.button");
 		selenium.waitForPageToLoad("30000");
+		assertEquals("电信手机", selenium.getText("link=电信手机"));
+		assertEquals("手机充值", selenium.getText("css=label > strong"));
 		assertEquals("电信  商品筛选", selenium.getText("css=h1"));
 		assertEquals("小米（MI） 红米1s电信 3G手机（金属灰） CDMA2000/GSM 双模双待小米限量到货2G RAM超高性价比阅丰2S现货火热抢购中！", selenium.getText("link=小米（MI） 红米1s电信 3G手机（金属灰） CDMA2000/GSM 双模双待小米限量到货2G RAM超高性价比阅丰2S现货火热抢购中！"));
 	}
